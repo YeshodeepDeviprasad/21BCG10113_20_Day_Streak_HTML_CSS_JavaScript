@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Text-to-Speech Website</title>
+    <script>
+      function speak() {
+        var text = document.getElementById("input").value;
+        var speech = new SpeechSynthesisUtterance();
+        speech.text = text;
+        speech.volume = 1;
+        speech.rate = 1;
+        speech.pitch = 1;
+        window.speechSynthesis.speak(speech);
+      }
+    </script>
+  </head>
+  <body>
+    <h1>Text-to-Speech Website</h1>
+    <form>
+      <label for="input">Enter text to speak:</label>
+      <br>
+      <textarea id="input"></textarea>
+      <br>
+      <button type="button" onclick="speak()">Speak</button>
+    </form>
+  </body>
+</html>
