@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Random Images</title>
+  <style>
+    #images {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .image {
+      width: 200px;
+      height: 200px;
+      margin: 10px;
+    }
+  </style>
+</head>
+<body>
+  <button id="generate-button">Generate Images</button>
+  <div id="images"></div>
+
+  <script>
+    var generateButton = document.getElementById("generate-button");
+    var imagesContainer = document.getElementById("images");
+
+    generateButton.addEventListener("click", function() {
+      imagesContainer.innerHTML = ""; // clear existing images
+      
+      for (var i = 0; i < 10; i++) {
+        var randomImageUrl = "https://picsum.photos/200/200?random=" + Math.random();
+        var imageElement = document.createElement("img");
+        imageElement.src = randomImageUrl;
+        imageElement.classList.add("image");
+        imagesContainer.appendChild(imageElement);
+      }
+    });
+  </script>
+</body>
+</html>
