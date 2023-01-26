@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Jumping Square</title>
+  <style>
+    #square {
+      width: 100px;
+      height: 100px;
+      background-color: blue;
+      position: absolute;
+    }
+  </style>
+</head>
+<body>
+  <div id="square"></div>
+
+  <script>
+    var square = document.getElementById("square");
+    var maxX = window.innerWidth - 100;
+    var maxY = window.innerHeight - 100;
+
+    square.addEventListener("click", function() {
+      var newX = Math.floor(Math.random() * maxX);
+      var newY = Math.floor(Math.random() * maxY);
+      square.style.left = newX + "px";
+      square.style.top = newY + "px";
+    });
+  </script>
+</body>
+</html>
