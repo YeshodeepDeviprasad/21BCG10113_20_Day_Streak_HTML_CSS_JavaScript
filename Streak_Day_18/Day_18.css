@@ -1,0 +1,16 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
+  
+  button {
+    padding: 1em 2em;
+    font-size: 1.2em;
+    background-color: lightgray;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
