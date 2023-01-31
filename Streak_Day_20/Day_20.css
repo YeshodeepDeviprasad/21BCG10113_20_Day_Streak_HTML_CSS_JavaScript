@@ -1,0 +1,14 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+  }
+  
+  input[type="number"] {
+    width: 100px;
+  }
+  
+  #output {
+    text-align:center;
+    padding: 10px;
+  }
+  
